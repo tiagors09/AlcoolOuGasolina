@@ -4,5 +4,5 @@
     <string name="hint_preco_alcool">Preço álcool ex: 1.90</string>
     <string name="hint_preco_gasolina">Preço gasolina ex.: 2.60</string>
     <string name="texto_botao">Calcular\n</string>
-    <string name="label_resultado">Melhor utilizar</string>
+    <string name="label_resultado">Resultado</string>
 </resources>
