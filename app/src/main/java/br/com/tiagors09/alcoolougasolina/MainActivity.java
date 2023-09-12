@@ -25,13 +25,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void decidir(View v) {
-        this.precoAlcool = Double.parseDouble(this.edtTextPrecoAlcool.getText().toString());
-        this.precoGasolina = Double.parseDouble(this.edtTxtPrecoGasolina.getText().toString());
+        String precoGasolina = this.edtTextPrecoAlcool.getText().toString();
+        String precoAlcool = this.edtTxtPrecoGasolina.getText().toString();
 
-        if (this.precoAlcool > this.precoGasolina) {
-            this.resultado.setText("Melhor utilizar Gasolina");
+        if(!precoAlcool.equals("") && !precoGasolina.equals("")) {
+            this.precoAlcool = Double.parseDouble(precoAlcool);
+            this.precoGasolina = Double.parseDouble(precoGasolina);
+
+            if (this.precoAlcool > this.precoGasolina) {
+                this.resultado.setText("Melhor utilizar Gasolina");
+            } else {
+                this.resultado.setText("Melhor utilizar Alcool");
+            }
         } else {
-            this.resultado.setText("Melhor utilizar Alcool");
+            this.resultado.setText("Preencha os campos!!!");
         }
     }
 }
